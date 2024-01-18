@@ -26,4 +26,4 @@ chmod u+x scan_nmap_v1
 
 ## YouTube
 
-[![NMAP - GUIDE POUR LES DÉBUTANTS](https://s3curity.info/wp/wp-content/uploads/2023/11/Miniature-Video.jpg)](https://youtu.be/o5pJrwT57DQ)
+[![NMAP - GUIDE POUR LES DÉBUTANTS](https://s3curity.info/wp/wp-content/uploads/2023/11/Miniature-Video.jpg)](https://youtu.be/o5pJrwT57DQ){:target="_blank"}
