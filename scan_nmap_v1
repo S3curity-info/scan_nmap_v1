@@ -1,0 +1,162 @@
+#!/bin/bash
+
+#### FONCTIONS ####
+# Appuyer sur Entrée pour continuer
+entree() {
+	read -p "Appuyez sur Entrée pour continuer..."
+}
+# Chercher les machines connectées sur un réseau
+scan_reseau() {
+        clear
+        read -p "Veuillez saisir une adresse réseau : " ip_reseau
+        read -p "Veuillez saisir son CIDR : " cidr
+        clear
+        echo "Lancement du scan réseau..."
+	sudo nmap -sn  "$ip_reseau"/"$cidr"
+	entree
+}
+
+# Scanner une plage de ports TCP
+scan_plage_port() {
+	clear
+        read -p "Veuillez saisir un numéro de port de départ : " port_start
+        read -p "Veuillez saisir un numéro de port de fin : " port_end
+        read -p "Veuillez saisir une IP cible : " ip
+        clear
+        echo "Lancement du scan de port sur la machine "$ip" ..."
+	sudo nmap -p"$port_start"-"$port_end" "$ip"
+	entree
+}
+
+# Scanner un port TCP spécifique
+scan_port() {
+	clear
+        read -p "Veuillez saisir un numéro de port : " port
+        read -p "Veuillez saisir une IP cible : " ip
+        clear
+        echo "Lancement du scan de l'ip "$ip" sur le port n°"$port" ..."
+	sudo nmap -p T:"$port" "$ip"
+	entree
+}
+
+# Scan pour identifier le type d'OS
+scan_os() {
+	clear
+        read -p "Veuillez saisir une IP cible : " ip
+        clear
+        echo "Lancement du scan de l'ip "$ip" pour identifier le type d'OS ..."
+	sudo nmap -O "$ip"
+	entree
+}
+
+# Scan pour identifier la version des services
+scan_version() {
+	clear
+        read -p "Veuillez saisir une IP cible : " ip
+        clear
+        echo "Lancement du scan de l'ip "$ip" pour identifier la version des services ..."
+	sudo nmap -sV "$ip"
+	entree
+}
+
+# Scan complet
+scan_full() {
+	clear
+        read -p "Veuillez saisir une IP cible : " ip
+        clear
+        echo "Lancement du scan de l'ip "$ip" pour un scan complet ..."
+	sudo nmap -A "$ip"
+	entree
+}
+
+# Vérifier la présence de Nmap sur votre machine
+nmap_verif() {
+	clear
+        if ! command -v nmap &> /dev/null; then
+                echo "Nmap non présent, merci de l'installer en passant par l'option [8]"
+                exit 1
+        else
+                echo "Nmap présent sur votre machine, vous pouvez lancer les options du script"
+		entree
+        fi
+}
+
+# Installer Nmap
+nmap_install() {
+	clear
+	echo "Etape 1/3"
+	echo "Installation en cours, veuillez patienter ..."
+        sudo apt update &> /dev/null
+	echo "Etape 2/3"
+	echo "Installation en cours, veuillez patienter ..."
+	sudo apt upgrade -y &> /dev/null
+	echo "Etape 3/3"
+	echo "Installation en cours, veuillez patienter ..."
+	sudo apt install nmap -y &> /dev/null
+        clear
+        echo "Nmap installé, vous pouvez lancer les options du script"
+	entree
+}
+
+# Quitter le script
+quit() {
+	clear
+        read -p "Merci, au revoir ! (Appuyez sur Entrée pour quitter)"
+        clear
+        exit 1
+}
+
+# Si un mauvais choix est saisi
+other() {
+	clear
+        echo "L'option choisie n'est pas la bonne, veuillez réessayer"
+	entree
+}
+
+### MENU AVEC BOUCLE WHILE ####
+while true; do
+clear
+echo "  #######################################################"
+echo "  #              Scan Nmap by PhOeNiX                   #"
+echo "  #                                                     #"
+echo "  # Faites votre choix parmis les options suivantes :   #"
+echo "  #                                                     #"
+echo "  # [1] Chercher les machines connectées sur un réseau  #"
+echo "  # [2] Scanner une plage de ports TCP                  #"
+echo "  # [3] Scanner un port TCP spécifique                  #"
+echo "  # [4] Scan pour identifier le type d'OS               #"
+echo "  # [5] Scan pour identifier la version des services    #"
+echo "  # [6] Scan complet                                    #"
+echo "  #                                                     #"
+echo "  # [7] Vérifier la présence de Nmap sur votre machine  #"
+echo "  # [8] Installer Nmap                                  #"
+echo "  # [9] Quitter le script                               #"
+echo "  #                                                     #"
+echo "  #                                      TSSR 2023-2024 #"
+echo "  #######################################################"
+echo
+read -p "          Veuillez saisir votre choix : " choix
+
+#### APPEL DES FONCTIONS ####
+case "$choix" in
+	1) scan_reseau
+	;;
+	2) scan_plage_port
+	;;
+	3) scan_port
+	;;
+	4) scan_os
+	;;
+	5) scan_version
+	;;
+	6) scan_full
+	;;
+	7) nmap_verif
+	;;
+	8) nmap_install
+	;;
+	9) quit
+	;;
+	*) other
+esac
+done
