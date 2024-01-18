@@ -10,7 +10,9 @@ Un menu qui permet déjà de vérifier la présence de Nmap sur la machine, de l
 ## Installation
 
 ```bash
-git clone https://github.com/S3curity-info/scan_nmap_v1/blob/main/scan_nmap_v1  
+git clone https://github.com/S3curity-info/scan_nmap_v1/blob/main/scan_nmap_v1
+```
+```bash
 ./scan_nmap_v1
 ```
 
