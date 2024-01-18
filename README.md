@@ -26,4 +26,11 @@ chmod u+x scan_nmap_v1
 
 ## YouTube
 
+<a href="https://youtu.be/o5pJrwT57DQ" target="_blank">
+  <img src="https://img.youtube.com/vi/o5pJrwT57DQ/0.jpg" alt="Aperçu de la vidéo">
+</a>
+
+
+
+
 [![NMAP - GUIDE POUR LES DÉBUTANTS](https://s3curity.info/wp/wp-content/uploads/2023/11/Miniature-Video.jpg)](https://youtu.be/o5pJrwT57DQ){:target="_blank"}
