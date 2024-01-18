@@ -21,5 +21,3 @@ git clone https://github.com/S3curity-info/scan_nmap_v1/blob/main/scan_nmap_v1
 <div align="center">
   <img src="https://s3curity.info/wp/wp-content/uploads/2024/01/Capture-decran-2024-01-18-123340.png" alt="menu_nmap_v1">
 </div>
-
-Saisissez l'option que vous voulez et laissez-vous guider dans les menus
