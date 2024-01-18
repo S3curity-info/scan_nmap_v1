@@ -132,7 +132,6 @@ echo "  # [7] Vérifier la présence de Nmap sur votre machine  #"
 echo "  # [8] Installer Nmap                                  #"
 echo "  # [9] Quitter le script                               #"
 echo "  #                                                     #"
-echo "  #                                      TSSR 2023-2024 #"
 echo "  #######################################################"
 echo
 read -p "          Veuillez saisir votre choix : " choix
