@@ -23,3 +23,7 @@ chmod u+x scan_nmap_v1
 <div align="center">
   <img src="https://s3curity.info/wp/wp-content/uploads/2024/01/Capture-decran-2024-01-18-123340.png" alt="menu_nmap_v1">
 </div>
+
+## YouTube
+
+[NMAP - GUIDE POUR LES DÉBUTANTS](https://youtu.be/o5pJrwT57DQ)
