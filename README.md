@@ -1,9 +1,9 @@
 # Scan Nmap v1
 
-Débutant sur le scripting Bash, j'ai décidé de tenter ce premier script pour me faire la mains.  
-Il n'a rien d'exeptionnel mais il permet d'utiliser les fonctionnalitées basiques de Nmap pour ceux qui n'y connaissent rien.  
+Débutant en scripting Bash, j'ai décidé de tenter ce premier script pour me familiariser avec la syntaxe.  
+Il n'a rien d'exceptionnel, mais il permet d'utiliser les fonctionnalités basiques de Nmap pour ceux qui n'y connaissent rien.  
 
-Un menu qui permet déjà de vérifier la présence de Nmap sur la machine, de l'installer et de lancer certains types de scan en posant les questions nécessaires à la bonne exécution de la commande.
+Un menu permet déjà de vérifier la présence de Nmap sur la machine, de l'installer, et de lancer certains types de scans en posant les questions nécessaires à la bonne exécution de la commande.  
 
 ## Installation
 
