@@ -6,7 +6,6 @@ Un menu qui permet déjà de vérifier la présence de Nmap sur la machine, de l
 <div align="center">
   <img src="https://s3curity.info/wp/wp-content/uploads/2023/04/cropped-Logo-Rouge-Blanc-Fond-Noir-Grand.png" alt="Banniere_S3curity.info">
 </div>
-![S3curity.info](https://s3curity.info/wp/wp-content/uploads/2023/04/cropped-Logo-Rouge-Blanc-Fond-Noir-Grand.png)
 
 ## Installation
 
@@ -15,6 +14,8 @@ git clone https://github.com/S3curity-info/scan_nmap_v1/blob/main/scan_nmap_v1
 
 ## Utilisation
 
-![Image](https://s3curity.info/wp/wp-content/uploads/2024/01/Capture-decran-2024-01-18-123340.png)
+<div align="center">
+  <img src="https://s3curity.info/wp/wp-content/uploads/2024/01/Capture-decran-2024-01-18-123340.png" alt="menu_nmap_v1">
+</div>
 
 Saisissez l'option que vous voulez et laissez-vous guider dans les menus
