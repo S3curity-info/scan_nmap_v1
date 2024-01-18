@@ -1,6 +1,6 @@
 # Scan Nmap v1
 
-Petit script sur des commandes de base de Nmap.
+Petit script sur des commandes de base de Nmap.  
 Un menu qui permet déjà de vérifier la présence de Nmap sur la machine, de l'installer et de lancer certains types de scan en posant les questions nécessaires à la bonne exécution de la commande.
 
 <div align="center">
